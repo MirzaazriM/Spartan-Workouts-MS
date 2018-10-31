@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mobile-main-service:
+    image: main:v2
+    build:
+      context: .  # moze i url na git repository, kao i gitcommithash preko args varijabli
+      #shm_size: '2gb'  -- shared memory inside container
+      #command: bundle exec thin -p 3000  --  za izvrsenje komandi
+    ports:
+      - 200:80
+    environment:
+      PRODUCTION: 'false' # or CONFIG_FILE_PATH: /file/path
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s  

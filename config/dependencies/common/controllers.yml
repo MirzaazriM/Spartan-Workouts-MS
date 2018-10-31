@@ -1,0 +1,15 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+        
+    Application\Controller\:
+        resource: '../../../src/Application/Controller/*'
+        
+    controller.landing:
+        alias: 'Application\Controller\Landing'
+        
+    controller.workouts:
+        alias: 'Application\Controller\WorkoutsController'

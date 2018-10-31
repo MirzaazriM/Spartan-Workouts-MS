@@ -1,0 +1,15 @@
+parameters:
+
+        database.dsn: 'mysql:host=localhost;dbname=Spartan'
+        
+        config:
+            mobile_url: 'spartan-mobile:8888'
+            apps_url: 'spartan-apps:8888'
+            exercises_url: 'spartan-exercises:8888'
+            auth_url: 'spartan-auth:8888'
+            packages_url: 'spartan-packages:8888'
+            system_url: 'spartan-system:8888'
+            tags_url: 'spartan-tags:8888'
+            workouts_url: 'spartan-workouts:8888'
+            notifications_url: 'spartan-notifications:8888'
+            monolog_url: 'spartan-monolog:8888'
